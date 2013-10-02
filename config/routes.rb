@@ -15,4 +15,5 @@ MicroTutos::Application.routes.draw do
   #   end
 
   resources :tutorials
+  resources :stages
 end
