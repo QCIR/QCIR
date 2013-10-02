@@ -1,0 +1,3 @@
+class StagesController < ApplicationController
+	
+end

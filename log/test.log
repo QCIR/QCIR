@@ -1,0 +1,32 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `tutorials` (`category_id`, `comment_id`, `created_at`, `description`, `stage_id`, `title`, `updated_at`, `user_id`) VALUES (1, 1, '2013-10-02 18:51:11', 'Descrição padrão de teste, usada para descrever um tutorial, antes de ser aplicados seus estagios.', 1, 'Tutorial de teste padrão', '2013-10-02 18:51:11', 1)
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (49.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `tutorials` (`category_id`, `comment_id`, `created_at`, `description`, `stage_id`, `title`, `updated_at`, `user_id`) VALUES (1, 1, '2013-10-02 18:51:15', 'Descrição padrão de teste, usada para descrever um tutorial, antes de ser aplicados seus estagios.', 1, 'Tutorial de teste padrão', '2013-10-02 18:51:15', 1)
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (49.6ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `tutorials` (`category_id`, `comment_id`, `created_at`, `description`, `stage_id`, `title`, `updated_at`, `user_id`) VALUES (1, 1, '2013-10-02 18:51:39', 'Descrição padrão de teste, usada para descrever um tutorial, antes de ser aplicados seus estagios.', 1, 'Tutorial de teste padrão', '2013-10-02 18:51:39', 1)
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (46.0ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `tutorials` (`category_id`, `comment_id`, `created_at`, `description`, `stage_id`, `title`, `updated_at`, `user_id`) VALUES (1, 1, '2013-10-02 18:55:10', 'Descrição padrão de teste, usada para descrever um tutorial, antes de ser aplicados seus estagios.', 1, 'Tutorial de teste padrão', '2013-10-02 18:55:10', 1)
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (52.6ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `tutorials` (`category_id`, `comment_id`, `created_at`, `description`, `stage_id`, `title`, `updated_at`, `user_id`) VALUES (1, 1, '2013-10-02 19:03:14', 'Descrição padrão de teste, usada para descrever um tutorial, antes de ser aplicados seus estagios.', 1, 'Tutorial de teste padrão', '2013-10-02 19:03:14', 1)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (38.4ms)[0m  ROLLBACK

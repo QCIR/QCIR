@@ -183,6 +183,7 @@ DEPENDENCIES
   compass (= 0.12.2)
   factory_girl (= 4.2.0)
   guard-rspec (= 3.1.0)
+  haml
   haml-rails (= 0.4)
   jbuilder (= 1.2)
   jquery-rails (= 3.0.4)

@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 20131002174826) do
     t.integer  "user_id",                 null: false
     t.integer  "stage_id",                null: false
     t.integer  "category_id",             null: false
-    t.integer  "comment_id"
     t.integer  "status",      default: 0, null: false
     t.text     "moderation"
     t.datetime "created_at"
