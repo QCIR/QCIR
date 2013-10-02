@@ -5,3 +5,5 @@
 /log/*
 /tmp/*
 /spec/tmp/*
+Guardfile
+*.lock
