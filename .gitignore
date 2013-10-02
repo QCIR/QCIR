@@ -1,3 +1,7 @@
-#Arquivos de log
-log/
-#
+.sass-cache
+.rspec
+/.bundle
+/vendor/bundle
+/log/*
+/tmp/*
+/spec/tmp/*
