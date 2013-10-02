@@ -11,7 +11,7 @@ class TutorialsController < ApplicationController
 
   def create
     @tutorial = current_user.tutorials.new(tutorial_params)
-    if @book.save
+    if @tutorial.save
       redirect_to tutorial_path(@tutorial)
     else
       render action: :new
@@ -29,8 +29,8 @@ class TutorialsController < ApplicationController
   def update
     @tutorial = Tutorial.find(params[:id])
 
-    if @book.update_attributes(tutorial_params)
-      redirect_to book_path(@tutorial)
+    if @tutorial.update_attributes(tutorial_params)
+      redirect_to tutorial_path(@tutorial)
     else
       render action: :edit
     end
