@@ -34,4 +34,16 @@ ActiveRecord::Schema.define(version: 20131002174826) do
     t.datetime "updated_at"
   end
 
+  create_table "users", force: true do |t|
+    t.string   "name",       null: false
+    t.date     "age",        null: false
+    t.string   "username",   null: false
+    t.string   "email",      null: false
+    t.string   "password",   null: false
+    t.boolean  "moderator"
+    t.boolean  "admin"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end
