@@ -10,6 +10,6 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
   config.infer_base_class_for_anonymous_controllers = false
   config.order = "random"
-  config.include Capybara::DSL #include capybara methods
-  config.include FactoryGirl::Syntax::Methods#include factory girls method
+  # config.include Capybara::DSL #include capybara methods
+  # config.include FactoryGirl::Syntax::Methods#include factory girls method
 end

@@ -5,3 +5,6 @@
 /log/*
 /tmp/*
 /spec/tmp/*
+Guardfile
+*.lock
+database.yml
