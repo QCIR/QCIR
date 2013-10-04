@@ -1,5 +1,7 @@
 class TutorialsController < ApplicationController
-  #before logged
+  before_filter :authenticate_user!, except: [:index, :show]
+  before_filter :owner?, only: [:edit, :update, :destroy]
+
 
   def index
     @tutorials = Tutorial.all
@@ -17,7 +19,7 @@ class TutorialsController < ApplicationController
     if @tutorial.save
       redirect_to tutorial_path(@tutorial)
     else
-      redirect_to '/'
+      render action: :new
     end
   end
 
@@ -30,7 +32,7 @@ class TutorialsController < ApplicationController
     @tutorial = Tutorial.find(params[:id])
 
     if @tutorial.update_attributes(tutorial_params)
-      redirect_to '/'
+      redirect_to tutorial_path(@tutorial)
     else
       render action: :edit
     end
@@ -49,6 +51,10 @@ class TutorialsController < ApplicationController
 
   def tutorial_params
     params.require(:tutorial).permit!
+  end
+
+  def owner?
+    redirect_to root_path if !@tutorial.user_owner?(current_user)
   end
 
 end

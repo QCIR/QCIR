@@ -14,4 +14,10 @@ class Tutorial < ActiveRecord::Base
     return "Moderada"     if status == 2
     return "Publicada"    if status == 3
   end
+
+  def user_owner?(curr)
+    if curr != user
+      return false
+    end
+  end
 end
