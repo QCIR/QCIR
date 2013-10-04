@@ -9,6 +9,7 @@ gem 'jbuilder', '1.2'
 gem 'devise', '3.0.0'
 gem 'haml', '4.0.3'
 gem 'awesome_print'
+gem 'pry'
 
 
 group :development do
