@@ -7,7 +7,6 @@ gem 'jquery-rails', '3.0.4'
 gem 'turbolinks', '1.3.0'
 gem 'jbuilder', '1.2'
 gem 'devise', '3.0.0'
-gem 'haml'
 
 
 group :development do
@@ -23,9 +22,9 @@ group :tests do
 end
 
 group :assets do
+  gem 'haml-rails', '0.4'
   gem 'uglifier', '1.3.0'
   gem 'sass-rails', '4.0.0'
-  gem 'haml-rails', '0.4'
   gem 'compass', '0.12.2'
 end
 
