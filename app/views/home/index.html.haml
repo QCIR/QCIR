@@ -1,10 +1,8 @@
-- if user_signed_in?
-  = "Bem vindo, #{current_user.email}"
-  %p= current_user.name
-  %p= current_user.age
-  %p= current_user.username
-  %p= current_user.encrypted_password
-  = link_to "Sair", destroy_user_session_path, method: :delete
--else
-  =link_to "Criar uma conta", new_user_registration_path
-  =link_to "Fazer Login", new_user_session_path
+=render 'index_logged' if user_signed_in?
+=render 'index_unlogged' if !user_signed_in?
+%header
+  .message
+    %h1 Bem vindo ao MicroTutos!
+    %h2 Compatilhe pequenos tutoriais e ajude pessoas a desenvolver melhor!
+.toptutos
+  =render 'shared/tutos'
