@@ -6,8 +6,8 @@ MicroTutos::Application.configure do
     :address              => "smtp.gmail.com", 
     :port                 => 587, 
     :domain               => 'gmail.com', 
-    :user_name            => 'treicyfelton@gmail.com', 
-    :password             => 'trefelton...,1402', 
+    :user_name            => 'micro.tutorials1@gmail.com', 
+    :password             => '123456poiuyt', 
     :authentication       => 'plain', 
     :enable_starttls_auto => true  
   } 
