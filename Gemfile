@@ -11,7 +11,6 @@ gem 'haml', '4.0.3'
 gem 'awesome_print', '1.2.0'
 gem 'pry', '0.9.12.2'
 
-
 group :development do
   gem 'coffee-rails', '4.0.0'
   gem 'therubyracer', :platforms => :ruby
