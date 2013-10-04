@@ -1,0 +1,6 @@
+%p 
+  Bem vindo #{= @email}!
+
+  Você pode confirmar o email da sua conta clicando no link abaixo:
+
+  = link_to 'Confirmar meu email', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token)
