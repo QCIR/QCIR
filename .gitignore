@@ -1,7 +1,0 @@
-.sass-cache
-.rspec
-/log/*
-/tmp/*
-/spec/tmp/*
-Guardfile
-*.lock
