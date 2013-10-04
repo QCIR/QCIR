@@ -1,0 +1,17 @@
+%h2 Esqueceu sua senha?
+Enviaremos um email com instruções para trocar sua senha. Por favor, preencha seu email cadastrado abaixo:
+
+= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+  = devise_error_messages!
+
+  %br
+  = f.label :email
+  %br
+  = f.email_field :email, :autofocus => true
+  %br
+
+  = f.submit "Enviar instruções agora"
+  %br
+  %br
+
+= render "devise/shared/links"
