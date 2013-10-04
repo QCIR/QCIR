@@ -1,8 +1,8 @@
 -@tutorials.each do |tutorial|
-  = tutorial.title
-  = tutorial.description
-  = tutorial.user.name.Titleize
+  %p= tutorial.title
+  %p= tutorial.description
+  %p= tutorial.user.name.titleize
   //= tutorial.category
-  = tutorial.
+  %p= tutorial.moderation_status
 
 =link_to "Criar novo tutorial", new_tutorial_path
