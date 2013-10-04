@@ -5,7 +5,7 @@ class CreateTutorial < ActiveRecord::Migration
     	t.text    :description, null: false
     	t.integer :user_id, null: false
     	t.integer :stage_id, null: false
-    	t.integer :category_id, null: false
+    	t.integer :category_id, null: false, default: '0'
 
     	t.integer :status, null: false, default: '0'
     	t.text 	  :moderation
