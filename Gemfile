@@ -7,6 +7,7 @@ gem 'jquery-rails', '3.0.4'
 gem 'turbolinks', '1.3.0'
 gem 'jbuilder', '1.2'
 gem 'devise', '3.0.0'
+gem 'haml', '4.0.3'
 
 
 group :development do
