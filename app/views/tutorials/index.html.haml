@@ -1,2 +1,8 @@
 -@tutorials.each do |tutorial|
-  %li= tutorial.title
+  = tutorial.title
+  = tutorial.description
+  = tutorial.user.name.Titleize
+  //= tutorial.category
+  = tutorial.
+
+=link_to "Criar novo tutorial", new_tutorial_path
