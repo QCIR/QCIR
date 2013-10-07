@@ -4,6 +4,6 @@ MicroTutos::Application.routes.draw do
   devise_for :users, controllers: {registrations: 'registrations'}
   
   resources :tutorials
-  resources :stages
+  resources :stages, only: [:destroy, :create, :update]
   resources :comments, only: [:destroy, :create]
 end
