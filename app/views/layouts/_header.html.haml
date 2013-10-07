@@ -7,5 +7,10 @@
   .nav
     =render 'layouts/nav'
   .user
-    user
+    - if user_signed_in?
+      = "Bem vindo, #{current_user.name}"
+      = link_to "Sair", destroy_user_session_path, method: :delete
+    -else
+      =link_to "Criar uma conta", new_user_registration_path
+      =link_to "Fazer Login", new_user_session_path  
   .end  

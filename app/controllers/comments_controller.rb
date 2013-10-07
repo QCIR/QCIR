@@ -11,6 +11,10 @@ class CommentsController < ApplicationController
     end
   end
 
+  def sendComment
+    p "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+  end
+
   def destroy
     @comment = params_id
     if @comment.destroy
