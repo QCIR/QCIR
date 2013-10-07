@@ -1,14 +1,19 @@
 class TutorialsController < ApplicationController
-  #before logged
-  
+  before_filter :authenticate_user!, except: [:index, :show]
+  before_filter :owner?, only: [:edit, :update, :destroy]
+
+
   def index
     @tutorials = Tutorial.all
   end
+  def show
+    @tutorial = tutorial
+  end
+
 
   def new
     @tutorial = Tutorial.new
   end
-
   def create
     @tutorial = current_user.tutorials.new(tutorial_params)
     if @tutorial.save
@@ -18,16 +23,13 @@ class TutorialsController < ApplicationController
     end
   end
 
-  def show
-    @tutorial = Tutorial.find(params[:id])
-  end
 
   def edit
-    @tutorial = Tutorial.find(params[:id])
+    @tutorial = tutorial
   end
 
   def update
-    @tutorial = Tutorial.find(params[:id])
+    @tutorial = tutorial
 
     if @tutorial.update_attributes(tutorial_params)
       redirect_to tutorial_path(@tutorial)
@@ -37,7 +39,7 @@ class TutorialsController < ApplicationController
   end
 
   def destroy
-    @tutorial = Tutorial.find(params[:id])
+    @tutorial = tutorial
     if @tutorial.destroy
       redirect_to tutorials_path
     else
@@ -46,7 +48,20 @@ class TutorialsController < ApplicationController
   end
 
   private
+
   def tutorial_params
     params.require(:tutorial).permit!
   end
+
+  def tutorial
+    Tutorial.find(params[:id])
+  end
+
+  def owner?
+    @tutorial = tutorial
+    redirect_to root_path if @tutorial.user != current_user
+  end
+
 end
+
+
