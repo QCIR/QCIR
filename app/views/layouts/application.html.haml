@@ -5,10 +5,10 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-    %p.notice= notice
-    %p.alert= alert
     =render 'layouts/header'
     .erros
       =render 'layouts/errors'
     .yield  
+      %p.notice= notice
+      %p.alert= alert
       = yield
