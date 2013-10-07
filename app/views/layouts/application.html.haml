@@ -1,4 +1,3 @@
-!!!
 %html
   %head
     %title MicroTutos
@@ -8,8 +7,8 @@
   %body
     %p.notice= notice
     %p.alert= alert
-    .navigation
-      =render 'layouts/nav'
+    =render 'layouts/header'
     .erros
       =render 'layouts/errors'
-    = yield
+    .yield  
+      = yield
