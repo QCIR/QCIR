@@ -5,5 +5,5 @@ MicroTutos::Application.routes.draw do
   
   resources :tutorials
   resources :stages
-  resources :comments, except: [:index, :edit, :update, :show]
+  resources :comments, only: [:destroy, :create]
 end

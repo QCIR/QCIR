@@ -7,6 +7,7 @@ class Tutorial < ActiveRecord::Base
   #relations
     belongs_to :user
     has_many :stages
+    has_many :comments
 
   def moderation_status
     return "Não moderada" if status == 0

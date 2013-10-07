@@ -8,6 +8,7 @@ class TutorialsController < ApplicationController
   end
   def show
     @tutorial = tutorial
+    @comment = Comment.new()
   end
 
 

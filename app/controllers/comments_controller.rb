@@ -1,15 +1,13 @@
 class CommentsController < ApplicationController
   
-  def new
-    @comment = Comment.new
-  end
-
   def create
     @comment = Comment.new(comment_params)
+    @comment.user = current_user
+    @comment.tutorial = params_tutorial
     if @comment.save
-      redirect_to '/'
+      redirect_to tutorial_path(@comment.tutorial)
     else
-      render action: :new
+      redirect_to tutorial_path(@comment.tutorial)
     end
   end
 
@@ -25,6 +23,10 @@ class CommentsController < ApplicationController
   private
   def params_id
     Comment.find(params[:id])
+  end
+
+  def params_tutorial
+    Tutorial.find(params[:tutorial_id])
   end
 
   def comment_params

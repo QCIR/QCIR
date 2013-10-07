@@ -4,3 +4,26 @@
   %p= @tutorial.user.name
 %hr
 Stages:
+
+= form_for(@comment) do |f|
+  - if @comment.errors.any?
+    #error_explanation
+      %ul
+        - @comment.errors.full_messages.each do |msg|
+          %li= msg
+   
+  .label Título
+  = f.text_field :title, placeholder: 'Título da mensagem'
+  .label Comentário*
+  = f.text_area :body
+  = hidden_field_tag :tutorial_id, params[:id]
+  .actions
+    = f.submit class: 'submitComment', value: 'Enviar' 
+%hr
+-@tutorial.comments.each do |comment|
+  %hr
+  .comment
+    %p=comment.title
+    %p=comment.body
+= content_for :javascript do
+  :javascript
