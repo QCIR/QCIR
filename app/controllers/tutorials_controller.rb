@@ -7,7 +7,7 @@ class TutorialsController < ApplicationController
     @tutorials = Tutorial.all
   end
   def show
-    @tutorial = Tutorial.find(params[:id])
+    @tutorial = tutorial
   end
 
 
@@ -25,11 +25,11 @@ class TutorialsController < ApplicationController
 
 
   def edit
-    @tutorial = Tutorial.find(params[:id])
+    @tutorial = tutorial
   end
 
   def update
-    @tutorial = Tutorial.find(params[:id])
+    @tutorial = tutorial
 
     if @tutorial.update_attributes(tutorial_params)
       redirect_to tutorial_path(@tutorial)
@@ -39,7 +39,7 @@ class TutorialsController < ApplicationController
   end
 
   def destroy
-    @tutorial = Tutorial.find(params[:id])
+    @tutorial = tutorial
     if @tutorial.destroy
       redirect_to tutorials_path
     else
@@ -53,8 +53,13 @@ class TutorialsController < ApplicationController
     params.require(:tutorial).permit!
   end
 
+  def tutorial
+    Tutorial.find(params[:id])
+  end
+
   def owner?
-    redirect_to root_path if !@tutorial.user_owner?(current_user)
+    @tutorial = tutorial
+    redirect_to root_path if @tutorial.user != current_user
   end
 
 end
