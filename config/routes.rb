@@ -7,5 +7,5 @@ MicroTutos::Application.routes.draw do
   resources :stages, only: [:destroy, :create, :update]
   resources :comments, only: [:destroy, :create]
 
-  match 'comments/sendComment' => 'comments#sendComment'
+  get 'comments/sendComment' => 'comments#sendComment'
 end
