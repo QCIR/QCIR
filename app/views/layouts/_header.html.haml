@@ -3,9 +3,13 @@
 
 %header
   .logo
-    logo
+    = link_to 'inicio', '/'
   .nav
     =render 'layouts/nav'
   .user
-    user
+    - if user_signed_in?
+      = "Bem vindo, #{current_user.name}"
+      = link_to "Sair", destroy_user_session_path, method: :delete
+    -else
+      Faça #{link_to "login", new_user_session_path} ou #{link_to "registre-se", new_user_registration_path}!
   .end  

@@ -8,7 +8,13 @@ class TutorialsController < ApplicationController
   end
   def show
     @tutorial = tutorial
+    @comment = Comment.new()
   end
+
+  def partial
+    @tutorial = tutorial
+    @stage = Stage.new()
+  end 
 
 
   def new

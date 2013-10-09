@@ -4,6 +4,9 @@ MicroTutos::Application.routes.draw do
   devise_for :users, controllers: {registrations: 'registrations'}
   
   resources :tutorials
-  resources :stages
-  resources :comments, except: [:index, :edit, :update, :show]
+  resources :stages, only: [:destroy, :create, :update]
+  resources :comments, only: [:destroy, :create]
+
+  get 'tutorials/:id/partial' => 'tutorials#partial', as: 'partial'
+  get 'comments/sendComment' => 'comments#sendComment'
 end

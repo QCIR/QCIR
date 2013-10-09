@@ -5,20 +5,36 @@
   width: 100%
 
 header
-  line-height: 30px
+  line-height: 0
   margin: 10px auto
+  margin-bottom: 30px
   width: 960px
   .logo
-    background: #000
-    float: left
-    height: 70px
-    text-indent: -999em
-    width: 200px
-
+    a
+      background: url('logo.png') no-repeat
+      float: left
+      height: 70px
+      text-indent: -999em
+      width: 200px
   .nav
+    line-height: 50px
     margin-right: 20px
     text-align: right
-
+    word-spacing: 20px
+    .no_space
+      word-spacing: normal  
+    a
+      color: #000
+      font-weight: bold
+      text-decoration: none
+      &:hover
+        color: #00AEEF
   .user 
     margin-right: 20px
     text-align: right
+    a
+      color: #00AEEF
+      font-weight: bold
+      text-decoration: none
+      &:hover
+        color: #5F5F5F
