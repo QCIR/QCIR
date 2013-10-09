@@ -1,0 +1,54 @@
+@mixin colorConfig($title)
+  padding: 5px 10px 5px 10px
+  height: 200px
+  & h1
+    color: white
+    font-size: 25px
+    font-weight: bold
+    font-variant: small-caps
+    text-align: center
+    text-shadow: 1px 1px 1px #000
+  & code
+    color: white
+    background-color: black
+
+body
+  font-family: "Trebuchet MS"
+::selection 
+  background: #00AEEF
+  color: #FFF
+
+.stages
+  margin: 0 auto
+  & p
+    margin: 0
+  & .color1
+    background-color: lighten(#CFCFCF, 13%)
+    +colorConfig(black)
+  & .color2
+    +colorConfig(white)
+    background-color: lighten(#FFFF00, 20%)
+  & .color3
+    +colorConfig(white)
+    background-color: lighten(#FFA500, 3%)
+  & .color4
+    +colorConfig(black)
+    background-color: #FF4040
+  & .color5
+    +colorConfig(white)
+    background-color: #7B68EE
+  & .color6
+    +colorConfig(white)
+    background-color: #00BFFF
+  & .color7
+    +colorConfig(white)
+    background-color: #32CD32
+  & .color8
+    +colorConfig(white)
+    background-color: #8B5A2B
+  & .color9
+    +colorConfig(white)
+    background-color: #FF4500
+  & .color10
+    +colorConfig(white)
+    background-color: #FF69B4
