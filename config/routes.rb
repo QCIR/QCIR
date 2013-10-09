@@ -8,4 +8,5 @@ MicroTutos::Application.routes.draw do
   resources :comments, only: [:destroy, :create]
 
   get 'tutorials/:id/partial' => 'tutorials#partial', as: 'partial'
+  get 'comments/sendComment' => 'comments#sendComment'
 end
