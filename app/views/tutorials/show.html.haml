@@ -3,7 +3,11 @@
   %h2= @tutorial.description
   %p= @tutorial.user.name
 %hr
-Stages:
+  -@tutorial.stages.each do |t|
+    %div{'class' => "color#{t.color}"}
+      %p= t.subtitle
+      %p= t.content
+%hr
 
 = form_for(@comment) do |f|
   - if @comment.errors.any?
