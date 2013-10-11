@@ -10,10 +10,19 @@ class Tutorial < ActiveRecord::Base
     has_many :comments
 
   def moderation_status
-    return "Não Postada"  if status == 0
-    return "Não moderada" if status == 1
-    return "Moderando"    if status == 2
-    return "Publicada"    if status == 3
-    return "Rejeitada"    if status == 4
+    case status
+      when 0
+        return "Não postada"
+      when 1
+        return "Não moderada"
+      when 2
+        return "Moderando"
+      when 3
+        return "Publicada"
+      when 4
+        return "Rejeitada"
+      else
+        return "Erro! - #{status}"
+    end
   end
 end
