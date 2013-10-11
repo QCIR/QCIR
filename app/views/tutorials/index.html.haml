@@ -1,8 +1,10 @@
--@tutorials.each do |tutorial|
-  %p= tutorial.title
-  %p= tutorial.description
-  %p= tutorial.user.name.titleize
-  //= tutorial.category
-  %p= tutorial.moderation_status
+= button_to "Criar novo tutorial", new_tutorial_path, class:'submitButton'
 
-=link_to "Criar novo tutorial", new_tutorial_path
+-@tutorials.each do |tutorial|
+  .list
+    %p= link_to tutorial.title.titleize, tutorial
+    %p= tutorial.description
+    %p Enviado por: #{tutorial.user.name.titleize}
+    %p Categorias: bla bla bla
+    //= tutorial.category
+= paginate @tutorials

@@ -10,6 +10,7 @@ gem 'devise', '3.0.0'
 gem 'haml', '4.0.3'
 gem 'awesome_print', '1.2.0'
 gem 'pry', '0.9.12.2'
+gem 'kaminari'
 
 group :development do
   gem 'coffee-rails', '4.0.0'
