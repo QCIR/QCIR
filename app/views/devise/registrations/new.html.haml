@@ -3,40 +3,34 @@
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
   = devise_error_messages!
 
-  .label "Nome"
-  %br
+  .label Nome
   = f.text_field :name, autofocus: true, placeholder: "Nome completo"
   %br
   %br
 
-  .label "Nome de usuário"
-  %br
+  .label Nome de usuário
   .ps (Não é permitido espaços)
   = f.text_field :username, placeholder: "Nome de usuário"
   %br
   %br
 
-  .label "Data de nascimento"
-  %br
+  .label Data de nascimento
   = f.date_field :age
   %br
   %br
 
-  .label "Email"
-  %br
+  .label Email
   = f.email_field :email, placeholder: "nome@examplo.com.br"
   %br
   %br
 
-  .label "Senha"
-  %br
+  .label Senha
   .ps (Mínimo 8 caracteres, não é permitido espaços)
   = f.password_field :password
   %br
   %br
 
-  .label "Confirmação de Senha"
-  %br
+  .label Confirmação de Senha
   = f.password_field :password_confirmation
   %br
   %br
