@@ -1,0 +1,17 @@
+.tutorial
+  %h1= @tutorial.title
+  %h2= @tutorial.description
+  %p= @tutorial.user.name
+%hr
+  .stages
+    -@tutorial.stages.each do |t|
+      %div{'class' => "color#{t.color}"}
+        %h1= t.subtitle.titleize
+        %p= raw t.content.humanize
+%hr
+  Adicione uma parte do tutorial:
+  =form_for @stage do |f|
+    %p= f.text_field :subtitle
+    %p= f.text_area :content
+    = hidden_field_tag :tutorial_id, params[:id]
+    %p= f.submit 'Adicionar'

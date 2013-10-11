@@ -12,6 +12,11 @@ class TutorialsController < ApplicationController
     @comment = Comment.new()
   end
 
+  def partial
+    @tutorial = tutorial
+    @stage = Stage.new()
+  end 
+
 
   def new
     @tutorial = Tutorial.new

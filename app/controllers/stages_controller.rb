@@ -12,12 +12,22 @@ class StagesController < ApplicationController
     @stage = params_id
   end
 
+  def colorize
+    color = @stage.tutorial.stages.last.color if @stage.tutorial.stages.last
+    color = 0 if color == nil || color == 10
+    @stage.color = color + 1
+  end
+
   def create
     @stage = Stage.new(stage_params)
+    @stage.tutorial_id = params[:tutorial_id]
+    p '!'*200
+    p params[:id]
+    colorize
     if @stage.save
-      redirect_to stage_path(@stage)
+      redirect_to "/tutorial/#{@stage.tutorial_id}/partial"
     else
-      render action: :new
+      redirect_to "/tutorial/#{@stage.tutorial_id}/partial"
     end
   end
 
