@@ -4,8 +4,9 @@ class TutorialsController < ApplicationController
 
 
   def index
-    @tutorials = Tutorial.all
+    @tutorials = Tutorial.where("moderation = 2").page(params[:page]).per(10)
   end
+
   def show
     @tutorial = tutorial
     @comment = Comment.new()
@@ -62,7 +63,6 @@ class TutorialsController < ApplicationController
     @tutorial = tutorial
     redirect_to root_path if @tutorial.user != current_user
   end
-
 end
 
 
